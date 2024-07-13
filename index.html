@@ -5,160 +5,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuadernillo de Práctica para Diseño y Desarrollo Web</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-5D5VVzGr7GDQ4Qv3cUJzwzN26l1Nd2bTaD3UrC6ZWGM3UTbRj08uPRR+CT2P5SRHkvSk1Ro5RZ9KhTcmEZ6nQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-1rP6FBn5C8R8ZtXLJxzK1IKCFKFs29jTGg9I82u3/m5fsr8t+1niPrOziAFd9Y0keZT3Ns1wAATv5scz6dOe6Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" integrity="sha512-bcGmYMt6MG5u4xwdyJ7tcm9eWTdlmFRJjp0E1J2zAyW4mZ2UP0kcbJlTh2VTr0qJDy06ZMCv+Z9JgVW7LKxI6Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            padding: 0;
-            margin: 0;
             background-color: #f4f4f4;
             color: #333;
+            margin: 0;
+            padding: 0;
         }
 
         .container {
-            display: flex;
             max-width: 1200px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .sidebar {
-            width: 250px;
-            background: #1a73e8;
-            color: white;
+            margin: 0 auto;
             padding: 20px;
         }
 
-        .sidebar h2 {
-            color: #f4f4f4;
+        h1, h2, h3, h4, h5 {
+            color: #007bff;
         }
 
-        .sidebar a {
-            display: block;
-            color: white;
-            text-decoration: none;
-            padding: 10px;
-            border-radius: 4px;
-            margin-bottom: 10px;
-        }
-
-        .sidebar a:hover {
-            background: #0f5ab4;
-        }
-
-        .main-content {
-            flex: 1;
-            padding: 20px;
-        }
-
-        h1, h2, h3, h4 {
-            color: #1a73e8;
-        }
-
-        pre {
-            background-color: #282c34;
-            color: #abb2bf;
-            padding: 10px;
-            border-radius: 5px;
-            overflow-x: auto;
-            position: relative;
-        }
-
-        pre code {
-            display: block;
-            overflow-x: auto;
-        }
-
-        .copy-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: #1a73e8;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-
-        .copy-button:hover {
-            background: #0f5ab4;
-        }
-
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-
-        ol {
-            padding-left: 20px;
-        }
-
-        .card {
-            background: #ffffff;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        h1 {
+            text-align: center;
             margin-bottom: 20px;
         }
 
+        h2 {
+            margin-top: 30px;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            margin-top: 20px;
+            border-bottom: 1px solid #007bff;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            margin: 20px 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        ul li {
+            margin: 10px 0;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            padding: 15px;
+        }
+
         .card h4 {
-            margin-top: 0;
+            margin: 0;
+            color: #007bff;
         }
 
         .card p {
             margin: 10px 0;
         }
 
-        .card pre {
-            background: #f1f1f1;
-            color: #333;
+        .card button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        .card button:hover {
+            background-color: #0056b3;
+        }
+
+        .code-container {
+            position: relative;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            padding: 5px 10px;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .copy-btn:hover {
+            background: #0056b3;
+        }
+
+        .language-javascript {
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+
+        pre {
+            margin: 0;
             padding: 10px;
         }
+
+        .line-numbers {
+            background-color: #f5f5f5;
+        }
     </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('pre').forEach((block) => {
-                const button = document.createElement('button');
-                button.textContent = 'Copiar';
-                button.className = 'copy-button';
-                block.appendChild(button);
-                button.addEventListener('click', () => {
-                    navigator.clipboard.writeText(block.querySelector('code').textContent).then(() => {
-                        button.textContent = 'Copiado!';
-                        setTimeout(() => button.textContent = 'Copiar', 1000);
-                    });
-                });
-            });
-        });
-    </script>
 </head>
 
 <body>
     <div class="container">
-        <div class="sidebar">
-            <h2>Contenido</h2>
-            <a href="#diseño">Diseño en el Nivel de Componentes</a>
-            <a href="#elementos">Elementos del Diseño de la Interfaz de Usuario</a>
-            <a href="#patrones">Diseño Basado en Patrones</a>
-        </div>
-        <div class="main-content">
+        <header>
             <h1>Cuadernillo de Práctica para Diseño y Desarrollo Web</h1>
+        </header>
 
-            <section id="diseño">
+        <nav>
+            <ul>
+                <li><a href="#componentes">1. Diseño en el Nivel de Componentes</a></li>
+                <li><a href="#elementos">2. Elementos del Diseño de la Interfaz de Usuario</a></li>
+                <li><a href="#patrones">3. Diseño Basado en Patrones</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="componentes">
                 <h2>1. Diseño en el Nivel de Componentes</h2>
-                <h3>Conceptos</h3>
                 <p>El diseño en el nivel de componentes se refiere a la creación y organización de componentes reutilizables en una aplicación web. Los componentes son unidades independientes que encapsulan su lógica y estilo, lo que permite una mayor modularidad y mantenibilidad.</p>
 
                 <h3>Visión Orientada a Objetos</h3>
                 <p>La visión orientada a objetos (OO) se enfoca en estructurar una aplicación utilizando objetos que representan entidades del mundo real. Cada objeto tiene atributos (datos) y métodos (funciones) que definen su comportamiento.</p>
-
-                <p>Ejemplo en React (Componentes Orientados a Objetos):</p>
-                <pre><code class="language-javascript">
+                <p><strong>Ejemplo en React (Componentes Orientados a Objetos):</strong></p>
+                <div class="code-container">
+                    <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                    <pre><code class="language-javascript">
 // Componente de clase en React
 import React, { Component } from 'react';
 
@@ -182,7 +169,8 @@ class UserProfile extends Component {
 }
 
 export default UserProfile;
-                </code></pre>
+                    </code></pre>
+                </div>
 
                 <h3>Visiones Tradicionales</h3>
                 <p>Las visiones tradicionales se refieren a enfoques más antiguos o convencionales en el diseño de software, como la programación estructurada, que se centra en la división del programa en funciones y subrutinas.</p>
@@ -192,9 +180,11 @@ export default UserProfile;
 
                 <h3>Diseño de Componentes Basados en Clases</h3>
                 <p>Este diseño implica definir componentes como clases en lugar de funciones. Cada clase puede tener su propio estado y métodos.</p>
-
-                <p>Ejemplo en React (Diseño basado en clases):</p>
-                <pre><code class="language-javascript">
+                <p><strong>Ejemplo en React (Diseño basado en clases):</strong></p>
+                <div class="code-container">
+                    <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                    <pre><code class="language-javascript">
+// Counter.js
 import React, { Component } from 'react';
 
 class Counter extends Component {
@@ -220,7 +210,8 @@ class Counter extends Component {
 }
 
 export default Counter;
-                </code></pre>
+                    </code></pre>
+                </div>
 
                 <h3>Principios de Diseño</h3>
                 <p>Los principios de diseño ayudan a crear software eficiente y fácil de mantener. Algunos principios clave son:</p>
@@ -240,17 +231,23 @@ export default Counter;
 
                 <div class="card">
                     <h4>Ejercicio: Crear un componente de lista de tareas</h4>
-
-                    <h5>Paso 1: Configurar el entorno de desarrollo</h5>
-                    <p>Herramienta: <code>Visual Studio Code</code><br>Framework: <code>React</code><br>Comando para crear un proyecto: <code>npx create-react-app todo-list</code></p>
-                    <pre><code class="language-bash">npx create-react-app todo-list
+                    <p><strong>Paso 1:</strong> Configurar el entorno de desarrollo</p>
+                    <p>Herramienta: Visual Studio Code</p>
+                    <p>Framework: React</p>
+                    <p>Comando para crear un proyecto:</p>
+                    <div class="code-container">
+                        <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        <pre><code class="language-bash">
+npx create-react-app todo-list
 cd todo-list
 npm start
-                    </code></pre>
+                        </code></pre>
+                    </div>
 
-                    <h5>Paso 2: Crear el componente de lista de tareas</h5>
-                    <p><strong>TodoList.js</strong></p>
-                    <pre><code class="language-javascript">
+                    <p><strong>Paso 2:</strong> Crear el componente de lista de tareas</p>
+                    <div class="code-container">
+                        <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        <pre><code class="language-javascript">
 // TodoList.js
 import React, { Component } from 'react';
 
@@ -277,11 +274,13 @@ class TodoList extends Component {
 }
 
 export default TodoList;
-                    </code></pre>
+                        </code></pre>
+                    </div>
 
-                    <h5>Paso 3: Integrar el componente en la aplicación principal</h5>
-                    <p><strong>App.js</strong></p>
-                    <pre><code class="language-javascript">
+                    <p><strong>Paso 3:</strong> Integrar el componente en la aplicación principal</p>
+                    <div class="code-container">
+                        <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        <pre><code class="language-javascript">
 // App.js
 import React from 'react';
 import TodoList from './TodoList';
@@ -295,11 +294,16 @@ function App() {
 }
 
 export default App;
-                    </code></pre>
+                        </code></pre>
+                    </div>
 
-                    <h5>Paso 4: Ejecutar la aplicación</h5>
-                    <pre><code class="language-bash">npm start
-                    </code></pre>
+                    <p><strong>Paso 4:</strong> Ejecutar la aplicación</p>
+                    <div class="code-container">
+                        <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        <pre><code class="language-bash">
+npm start
+                        </code></pre>
+                    </div>
                 </div>
             </section>
 
@@ -314,15 +318,22 @@ export default App;
 
                 <div class="card">
                     <h4>Ejercicio: Implementar un formulario accesible</h4>
+                    <p><strong>Paso 1:</strong> Configurar el entorno de desarrollo</p>
+                    <p>Herramienta: Visual Studio Code</p>
+                    <p>Framework: React</p>
+                    <p>Librería: Formik y Yup</p>
+                    <p>Comando para instalar las librerías:</p>
+                    <div class="code-container">
+                        <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        <pre><code class="language-bash">
+npm install formik yup
+                        </code></pre>
+                    </div>
 
-                    <h5>Paso 1: Configurar el entorno de desarrollo</h5>
-                    <p>Herramienta: <code>Visual Studio Code</code><br>Framework: <code>React</code><br>Librería: <code>Formik</code> y <code>Yup</code><br>Comando para instalar las librerías: <code>npm install formik yup</code></p>
-                    <pre><code class="language-bash">npm install formik yup
-                    </code></pre>
-
-                    <h5>Paso 2: Crear el formulario utilizando Formik y Yup</h5>
-                    <p><strong>ContactForm.js</strong></p>
-                    <pre><code class="language-javascript">
+                    <p><strong>Paso 2:</strong> Crear el formulario utilizando Formik y Yup</p>
+                    <div class="code-container">
+                        <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        <pre><code class="language-javascript">
 // ContactForm.js
 import React from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
@@ -364,11 +375,13 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
-                    </code></pre>
+                        </code></pre>
+                    </div>
 
-                    <h5>Paso 3: Integrar el formulario en la aplicación principal</h5>
-                    <p><strong>App.js</strong></p>
-                    <pre><code class="language-javascript">
+                    <p><strong>Paso 3:</strong> Integrar el formulario en la aplicación principal</p>
+                    <div class="code-container">
+                        <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        <pre><code class="language-javascript">
 // App.js
 import React from 'react';
 import ContactForm from './ContactForm';
@@ -383,17 +396,21 @@ function App() {
 }
 
 export default App;
-                    </code></pre>
+                        </code></pre>
+                    </div>
 
-                    <h5>Paso 4: Ejecutar la aplicación</h5>
-                    <pre><code class="language-bash">npm start
-                    </code></pre>
+                    <p><strong>Paso 4:</strong> Ejecutar la aplicación</p>
+                    <div class="code-container">
+                        <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        <pre><code class="language-bash">
+npm start
+                        </code></pre>
+                    </div>
                 </div>
             </section>
 
             <section id="patrones">
                 <h2>3. Diseño Basado en Patrones</h2>
-                <h3>Conceptos</h3>
                 <p>El diseño basado en patrones implica el uso de soluciones probadas y reutilizables para problemas comunes en el desarrollo de software. Los patrones de diseño ayudan a crear aplicaciones más robustas y mantenibles.</p>
 
                 <h3>Tipos de Patrones: Creacionales, Estructurales y Conductuales</h3>
@@ -407,10 +424,10 @@ export default App;
 
                 <div class="card">
                     <h4>Ejercicio: Implementar un patrón Singleton en JavaScript</h4>
-
-                    <h5>Paso 1: Crear el archivo Singleton.js</h5>
-                    <p><strong>Singleton.js</strong></p>
-                    <pre><code class="language-javascript">
+                    <p><strong>Paso 1:</strong> Crear el archivo Singleton.js</p>
+                    <div class="code-container">
+                        <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        <pre><code class="language-javascript">
 // Singleton.js
 class Singleton {
   constructor() {
@@ -434,11 +451,13 @@ const instance = new Singleton();
 Object.freeze(instance);
 
 export default instance;
-                    </code></pre>
+                        </code></pre>
+                    </div>
 
-                    <h5>Paso 2: Utilizar el Singleton en la aplicación</h5>
-                    <p><strong>App.js</strong></p>
-                    <pre><code class="language-javascript">
+                    <p><strong>Paso 2:</strong> Utilizar el Singleton en la aplicación</p>
+                    <div class="code-container">
+                        <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        <pre><code class="language-javascript">
 // App.js
 import React, { useState } from 'react';
 import singleton from './Singleton';
@@ -472,18 +491,34 @@ function App() {
 }
 
 export default App;
-                    </code></pre>
+                        </code></pre>
+                    </div>
 
-                    <h5>Paso 3: Ejecutar la aplicación</h5>
-                    <pre><code class="language-bash">npm start
-                    </code></pre>
+                    <p><strong>Paso 3:</strong> Ejecutar la aplicación</p>
+                    <div class="code-container">
+                        <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        <pre><code class="language-bash">
+npm start
+                        </code></pre>
+                    </div>
                 </div>
             </section>
-        </div>
+        </main>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-3E5MFGoN8wDlGbZ3MX8HozbO9Z7AFM1e/9a9Kz2XwFJ8L4Ysl0kTzOGkR1tKWTk6YDO0FbF1qgsM1Tl6a6f3lA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-QJ9Sc4nWodP8g8jZC2d/N4w1xBdU4MdAEokgP6saAa0G0ObU9BmcUFLvw0hmrTKrDxWlLg0uujO6eqSPf4m40Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-jzW0SwVYwthbVbdSjHeO5okLIZaA0qZ0zUAnEftFb7kzQ5efrSOpA64N4s0sP2Zf5nGEcNE+uU/6ZSMrKN+ppQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-R12glWCHZyEC/pIXQ5pMAu2bW06gxXMbvX9iF5EFz36wGc+7NnXffN+eMEsK1uL12ff5/jwEFHgfDMBgIkCHsw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        function copyCode(button) {
+            const code = button.nextElementSibling.textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                button.textContent = 'Copiado';
+                setTimeout(() => {
+                    button.textContent = 'Copiar';
+                }, 1000);
+            });
+        }
+    </script>
 </body>
 
 </html>
