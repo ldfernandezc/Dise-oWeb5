@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuadernillo de Práctica para Diseño y Desarrollo Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown.min.css" integrity="sha512-bIk2i/C5XWz3/o2eAFErTKh/Lvdi6SC2JSz5DDOq13Ru3a8D5rpVu5Pke8oc1ZTQtG8x/NOhQpKx6ckTzXZbQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        pre {
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        code {
+            background: #f5f5f5;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Cuadernillo de Práctica para Diseño y Desarrollo Web</h1>
+    
+    <h2>1. Diseño en el Nivel de Componentes</h2>
+    
+    <h3>Conceptos</h3>
+    <p>El diseño en el nivel de componentes se refiere a la creación y organización de componentes reutilizables en una aplicación web. Los componentes son unidades independientes que encapsulan su lógica y estilo, lo que permite una mayor modularidad y mantenibilidad.</p>
+    
+    <h3>Visión Orientada a Objetos</h3>
+    <p>La visión orientada a objetos (OO) se enfoca en estructurar una aplicación utilizando objetos que representan entidades del mundo real. Cada objeto tiene atributos (datos) y métodos (funciones) que definen su comportamiento.</p>
+    <p><strong>Ejemplo en React (Componentes Orientados a Objetos):</strong></p>
+    <pre><code class="language-javascript">// Componente de clase en React
+import React, { Component } from 'react';
+
+class UserProfile extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: 'John Doe',
+      age: 25
+    };
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>{this.state.name}</h1>
+        <p>Age: {this.state.age}</p>
+      </div>
+    );
+  }
+}
+
+export default UserProfile;
+    </code></pre>
+    
+    <h3>Visiones Tradicionales</h3>
+    <p>Las visiones tradicionales se refieren a enfoques más antiguos o convencionales en el diseño de software, como la programación estructurada, que se centra en la división del programa en funciones y subrutinas.</p>
+    
+    <h3>Visión Relacionada con el Proceso</h3>
+    <p>Este enfoque se centra en los procesos y flujos de trabajo dentro de una aplicación. Es útil para diseñar sistemas donde la secuencia de actividades es crucial, como en un flujo de compra en línea.</p>
+    
+    <h3>Diseño de Componentes Basados en Clases</h3>
+    <p>Este diseño implica definir componentes como clases en lugar de funciones. Cada clase puede tener su propio estado y métodos.</p>
+    <p><strong>Ejemplo en React (Diseño basado en clases):</strong></p>
+    <pre><code class="language-javascript">import React, { Component } from 'react';
+
+class Counter extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0
+    };
+  }
+
+  increment = () => {
+    this.setState({ count: this.state.count + 1 });
+  };
+
+  render() {
+    return (
+      <div>
+        <p>Count: {this.state.count}</p>
+        <button onClick={this.increment}>Increment</button>
+      </div>
+    );
+  }
+}
+
+export default Counter;
+    </code></pre>
+    
+    <h3>Principios de Diseño</h3>
+    <p>Los principios de diseño ayudan a crear software eficiente y fácil de mantener. Algunos principios clave son:</p>
+    <ul>
+        <li><strong>DRY (Don't Repeat Yourself):</strong> Evitar la duplicación de código.</li>
+        <li><strong>KISS (Keep It Simple, Stupid):</strong> Mantener el diseño simple y directo.</li>
+        <li><strong>YAGNI (You Aren't Gonna Need It):</strong> No agregar funcionalidad innecesaria.</li>
+    </ul>
+    
+    <h3>Lineamientos de Diseño en el Nivel de Componentes</h3>
+    <p>Estos lineamientos proporcionan directrices para la creación de componentes eficientes y reutilizables:</p>
+    <ul>
+        <li><strong>Encapsulación:</strong> Cada componente debe manejar su propio estado y lógica.</li>
+        <li><strong>Reutilización:</strong> Crear componentes genéricos que puedan ser reutilizados en diferentes partes de la aplicación.</li>
+        <li><strong>Mantenibilidad:</strong> Escribir código claro y bien documentado.</li>
+    </ul>
+    
+    <h3>Realización del Diseño en el Nivel de Componentes</h3>
+    <p><strong>Ejercicio: Crear un componente de lista de tareas</strong></p>
+    
+    <h4>Paso 1: Configurar el entorno de desarrollo</h4>
+    <p>Herramienta: <code>Visual Studio Code</code></p>
+    <p>Framework: <code>React</code></p>
+    <p>Comando para crear un proyecto: <code>npx create-react-app todo-list</code></p>
+    <pre><code class="language-bash">npx create-react-app todo-list
+cd todo-list
+npm start
+    </code></pre>
+    
+    <h4>Paso 2: Crear el componente de lista de tareas</h4>
+    <p><strong>TodoList.js</strong></p>
+    <pre><code class="language-javascript">// TodoList.js
+import React, { Component } from 'react';
+
+class TodoList extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      tasks: ['Task 1', 'Task 2', 'Task 3']
+    };
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Todo List</h1>
+        <ul>
+          {this.state.tasks.map((task, index) => (
+            <li key={index}>{task}</li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
+}
+
+export default TodoList;
+    </code></pre>
+    
+    <h4>Paso 3: Integrar el componente en la aplicación principal</h4>
+    <p><strong>App.js</strong></p>
+    <pre><code class="language-javascript">// App.js
+import React from 'react';
+import TodoList from './TodoList';
+
+function App() {
+  return (
+    <div className="App">
+      <TodoList />
+    </div>
+  );
+}
+
+export default App;
+    </code></pre>
+    
+    <h4>Paso 4: Ejecutar la aplicación</h4>
+    <pre><code class="language-bash">npm start
+    </code></pre>
+    
+    <h2>2. Elementos del Diseño de la Interfaz de Usuario</h2>
+    <p><strong>Reglas:</strong> Control de Usuario, Reducir Necesidades de Memorización en el Sistema, Diseño Consistente con la Interfaz</p>
+    <p>Para crear interfaces de usuario efectivas, es importante seguir ciertas reglas:</p>
+    <ul>
+        <li><strong>Control de Usuario:</strong> Permitir que los usuarios controlen sus acciones y naveguen libremente por la aplicación.</li>
+        <li><strong>Reducir Necesidades de Memorización:</strong> Diseñar interfaces intuitivas que no requieran recordar mucha información.</li>
+        <li><strong>Diseño Consistente:</strong> Mantener una apariencia y comportamiento consistentes en toda la aplicación.</li>
+    </ul>
+    
+    <h3>Ejercicio: Implementar un formulario accesible</h3>
+    
+    <h4>Paso 1: Configurar el entorno de desarrollo</h4>
+    <p>Herramienta: <code>Visual Studio Code</code></p>
+    <p>Framework: <code>React</code></p>
+    <p>Librería: <code>Formik</code> y <code>Yup</code></p>
+    <p>Comando para instalar las librerías: <code>npm install formik yup</code></p>
+    <pre><code class="language-bash">npm install formik yup
+    </code></pre>
+    
+    <h4>Paso 2: Crear el formulario utilizando Formik y Yup</h4>
+    <p><strong>ContactForm.js</strong></p>
+    <pre><code class="language-javascript">// ContactForm.js
+import React from 'react';
+import { Formik, Field, Form, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
+
+const ContactForm = () => {
+  return (
+    <Formik
+      initialValues={{ name: '', email: '', message: '' }}
+      validationSchema={Yup.object({
+        name: Yup.string().required('Required'),
+        email: Yup.string().email('Invalid email address').required('Required'),
+        message: Yup.string().required('Required'),
+      })}
+      onSubmit={(values, { setSubmitting }) => {
+        setTimeout(() => {
+          alert(JSON.stringify(values, null, 2));
+          setSubmitting(false);
+        }, 400);
+      }}
+    >
+      <Form>
+        <label htmlFor="name">Name</label>
+        <Field name="name" type="text" />
+        <ErrorMessage name="name" component="div" />
+
+        <label htmlFor="email">Email</label>
+        <Field name="email" type="email" />
+        <ErrorMessage name="email" component="div" />
+
+        <label htmlFor="message">Message</label>
+        <Field name="message" as="textarea" />
+        <ErrorMessage name="message" component="div" />
+
+        <button type="submit">Submit</button>
+      </Form>
+    </Formik>
+  );
+};
+
+export default ContactForm;
+    </code></pre>
+    
+    <h4>Paso 3: Integrar el formulario en la aplicación principal</h4>
+    <p><strong>App.js</strong></p>
+    <pre><code class="language-javascript">// App.js
+import React from 'react';
+import ContactForm from './ContactForm';
+
+function App() {
+  return (
+    <div className="App">
+      <h1>Contact Us</h1>
+      <ContactForm />
+    </div>
+  );
+}
+
+export default App;
+    </code></pre>
+    
+    <h4>Paso 4: Ejecutar la aplicación</h4>
+    <pre><code class="language-bash">npm start
+    </code></pre>
+    
+    <h2>3. Diseño Basado en Patrones</h2>
+    <h3>Conceptos</h3>
+    <p>El diseño basado en patrones implica el uso de soluciones probadas y reutilizables para problemas comunes en el desarrollo de software. Los patrones de diseño ayudan a crear aplicaciones más robustas y mantenibles.</p>
+    
+    <h3>Tipos de Patrones: Creacionales, Estructurales y Conductuales</h3>
+    <ul>
+        <li><strong>Patrones Creacionales:</strong> Se enfocan en la creación de objetos de manera controlada. Ejemplo: Singleton, Factory.</li>
+        <li><strong>Patrones Estructurales:</strong> Se ocupan de la composición de clases y objetos. Ejemplo: Adapter, Decorator.</li>
+        <li><strong>Patrones Conductuales:</strong> Se enfocan en la comunicación entre objetos. Ejemplo: Observer, Strategy.</li>
+    </ul>
+    
+    <h3>Patrones de Diseño: Clases de Patrones, Estructuras, Descripción de Patrones, Lenguajes y Repositorios de Patrones</h3>
+    <h3>Ejercicio: Implementar un patrón Singleton en JavaScript</h3>
+    
+    <h4>Paso 1: Crear el archivo Singleton.js</h4>
+    <p><strong>Singleton.js</strong></p>
+    <pre><code class="language-javascript">// Singleton.js
+class Singleton {
+  constructor() {
+    if (!Singleton.instance) {
+      this.data = [];
+      Singleton.instance = this;
+    }
+    return Singleton.instance;
+  }
+
+  addData(item) {
+    this.data.push(item);
+  }
+
+  getData() {
+    return this.data;
+  }
+}
+
+const instance = new Singleton();
+Object.freeze(instance);
+
+export default instance;
+    </code></pre>
+    
+    <h4>Paso 2: Utilizar el Singleton en la aplicación</h4>
+    <p><strong>App.js</strong></p>
+    <pre><code class="language-javascript">// App.js
+import React, { useState } from 'react';
+import singleton from './Singleton';
+
+function App() {
+  const [item, setItem] = useState('');
+  const [data, setData] = useState(singleton.getData());
+
+  const addItem = () => {
+    singleton.addData(item);
+    setData(singleton.getData());
+    setItem('');
+  };
+
+  return (
+    <div className="App">
+      <h1>Singleton Pattern Example</h1>
+      <input
+        type="text"
+        value={item}
+        onChange={(e) => setItem(e.target.value)}
+      />
+      <button onClick={addItem}>Add Item</button>
+      <ul>
+        {data.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default App;
+    </code></pre>
+    
+    <h4>Paso 3: Ejecutar la aplicación</h4>
+    <pre><code class="language-bash">npm start
+    </code></pre>
+    
+</body>
+
+</html>
