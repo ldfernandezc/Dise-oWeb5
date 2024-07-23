@@ -1,11 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mi Curriculum</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header, section, footer {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+            text-align: center;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.8em;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
-    
+    <header>
+        <h1>Nombre</h1>
+        <p>Teléfono: +506 86182011</p>
+        <p>Email: correo@example.com</p>
+        <p>LinkedIn: <a href="https://linkedin.com/tu_perfil">linkedin.com/tu_perfil</a></p>
+    </header>
+
+    <section>
+        <h2>Experiencia Laboral</h2>
+        <article>
+            <h3>Nombre del Puesto</h3>
+            <p><strong>Empresa:</strong> Nombre de la Empresa</p>
+            <p><strong>Fecha de inicio:</strong></p><input type="date">
+            <p><strong>Fecha de finalizacion:</strong></p><input type="date">
+            <p><strong>Descripción:</strong> Breve descripción de tus responsabilidades y logros.</p>
+        </article>
+
+        <article>
+            <h3>Otro puesto</h3>
+            <p><strong>Empresa:</strong> Nombre de la Empresa</p>
+            <p><strong>Fecha de inicio:</strong></p><input type="date">
+            <p><strong>Fecha de finalizacion:</strong></p><input type="date">
+            <p><strong>Descripción:</strong> Breve descripción de tus responsabilidades y logros.</p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Educación</h2>
+        <article>
+            <h3>Nombre del Título</h3>
+            <p><strong>Institución:</strong> Nombre de la Institución</p>
+            <p><strong>Fecha de Graduación:</strong> Año</p>
+        </article>
+
+        <article>
+            <h3>Otro Título</h3>
+            <p><strong>Institución:</strong> Otra Institución</p>
+            <p><strong>Fecha de Graduación:</strong> Año</p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Habilidades</h2>
+        <ul>
+            <li>Habilidad 1</li>
+            <li>Habilidad 2</li>
+            <li>Habilidad 3</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>© 2024 Mi Nombre. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
