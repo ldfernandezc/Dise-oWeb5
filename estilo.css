@@ -6,6 +6,11 @@ body {
     background-color: rgb(195, 255, 135);
 }
 
+.imgs {
+    width: 100px; /* Ancho fijo, altura ajustada automáticamente */
+    margin-left: auto;
+}
+
 .container {
     max-width: 800px;
     margin: auto;
