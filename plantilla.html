@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formación de Fútbol 3-5-1-1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url('https://example.com/campo-de-futbol.jpg'); /* URL de la imagen del campo de fútbol */
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(188, 188, 188);
+        }
+        .formation {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            margin: 20px auto;
+            width: 80%;
+        }
+        .player {
+            background-color: rgba(76, 175, 80, 0.8); /* Fondo semi-transparente */
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .midfield {
+            grid-column: span 3;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 20px;
+        }
+        .forward {
+            grid-column: span 3;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 20px;
+        }
+        .goalkeeper {
+            grid-column: span 3;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 20px;
+        }
+        .navbar {
+            background-color: #fdfcfc;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #000000;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #6a107a;
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<header>
+
+    <nav class="navbar">
+        <a href="#volver">Volver</a>
+        <a href=joshua.html>Principal</a>
+    </nav>
+    
+</header>
+<body>
+
+<h1>Formación de Deportivo Saprissa</h1>
+
+<div class="formation goalkeeper">
+    <div class="player">E.Alavarado</div>
+</div>
+
+<div class="formation">
+    <div class="player">F.Escobar</div>
+    <div class="player">K.Waston</div>
+    <div class="player">E.Anderson</div>
+</div>
+
+<div class="formation midfield">
+    <div class="player">Valverde</div>
+    <div class="player">U.segura</div>
+    <div class="player">M.Torres</div>
+    <div class="player">D.Guzman</div>
+    <div class="player">Diasz</div>
+</div>
+
+<div class="formation forward">
+    <div class="player">J.East</div>
+</div>
+
+<h2>Nombres de los Jugadores</h2>
+<ul>
+    <li>Portero: Esteban Alavarado</li>
+    <li>Defensor :Fidel Escobar</li>
+    <li>Defensor :Eduardo Anderson</li>
+    <li>Defensor :Kendall Waston</li>
+    <li>Mediocampista : Jefrey Valverde</li>
+    <li>Mediocampista : Ulises Segura</li>
+    <li>Mediocampista : David Guzman</li>
+    <li>Mediocampista : Mariano Torres (C)</li>
+    <li>Mediocampista : Luis Diaz</li>
+    <li>Delantero: Javon East</li>
+</ul>
+
+</body>
+</html>
+
