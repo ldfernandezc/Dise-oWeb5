@@ -1,4 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar with Submenu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
 
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-brand">Progra5</a>
+            <div class="navbar-toggle" id="navbarToggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="navbar-menu" id="navbarMenu">
+                <a href="index.html" class="navbar-item">Inicio</a>
+                <a href="#about" class="navbar-item">About</a>
+                <div class="navbar-item submenu-container">
+                    <a href="#services" class="navbar-item submenu-toggle">Programadores <i class="fas fa-caret-down"></i></a>
+                    <div class="submenu">
+                        <a href="asshrc.html" class="submenu-item">Asshly</a>
+                        <a href="crclum.html" class="submenu-item">Dylan</a>
+                        <a href="ale.html" class="submenu-item">Alejandro</a>
+                        <a href="jeremy.html" class="submenu-item">Jeremy</a>
+                        <a href="adrian.html" class="submenu-item">Adrian</a>
+                        <a href="Yoel.html" class="submenu-item">Yoel</a>
+                        <a href="kare.html" class="submenu-item">Karen</a>
+                        <a href="danny" class="submenu-item">Danny</a>
+                        <a href="joshua.html" class="submenu-item">Joshua</a>
+                        <a href="Aaron.html" class="submenu-item">Aaron</a>
+                        <a href="#marketing" class="submenu-item">Daniel</a>
+                        <a href="maidelyn.html" class="submenu-item">Maidelyn</a>
+                        <a href="#marketing" class="submenu-item">Ashley M</a>
+                        <a href="#marketing" class="submenu-item">Sebastián</a>
+                        <a href="#marketing" class="submenu-item">Carlos</a>
+                    </div>
+                </div>
+                <a href="#contact" class="navbar-item">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
 </html>
