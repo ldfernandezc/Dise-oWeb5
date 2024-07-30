@@ -7,16 +7,39 @@
 <style>
     body {
         font-family: Arial, sans-serif;
+        height: 100vh; 
         margin: 0;
         padding: 0;
+        background: linear-gradient(to bottom, #ff7e5f, #feb47b);
     }
 
     .central {
         display: flex;
+        height: 70vh;
+        margin-top: 5%;
     }
     .img {
         height: 200px;
         border-radius: 200px;
+    }
+    .derecha {
+        display: flex;
+        width: 45%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        flex-direction: column;
+    }
+
+    .izquierda {
+        display: flex;
+        width: 45%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        flex-direction: column;
+    }
+
+    .container-img {
+        width: 100%;
     }
 </style>
 </head>
@@ -25,33 +48,33 @@
 <!-- documento central -->
 <div class="central">
 <!-- ----------------------------------------------derecha----------------------------------------------- -->
-    <div class="derecha">
-        <div>
+    <div class="izquierda">
+        <div class="container-img">
+            hola
             <img class="img" src="" alt="">
         </div>
     
-        <div>
+        <div class="container-nombre">
             <div><h1>Nombre</h1></div>
-            <div><h3>keylor</h3></div>
+            <div><h3>Keilor Antonio Navas Gamboa</h3></div>
         </div>
     </div>
 
 <!-- ----------------------------izquierda---------------------------------------- -->
-    <div class="izquierda">
-        <div>
+    <div class="derecha">
+        <div class="container-historia">
             <div><h2>historia</h2></div>
             <div>La historia de Keylor Navas inició el 15 de diciembre de 1986; nació en San Isidro, San José, Costa Rica, y es hijo de Sandra Gamboa y Freddy Navas. Sin embargo, cuando Keylor y su hermana, Keilyn, eran niños tuvieron que dejar de ver a sus padres, porque decidieron irse a Estados Unidos en busca del ‘sueño americano’.</div>
         </div>
-        <div>
-            <div><h2>logros</h2></div>
-            <div></div>
+        <div class="container-logros">
+            <div class="container-logros"><h2>logros</h2></div>
+            <div>Campeón Nacional: 6 (1 en el 2006, 2 en el 2007, 2 en el 2008 y 1 en el 2010) Liga de Campeones de Concacaf: 1 (2005) Este es el palmarés de Navas con el Real Madrid: Liga Española: 1 (2017) Súpercopa de España: 1 (2017) Súpercopa de Europa: 3 (2014, 2016 y 2017) Mundial de Clubes: 4 (2014, 2016, 2017 y 2018)</div>
         </div>
     </div>
 </div>
 
 <!-- parte inferior -->
-<div>
-    <div></div>
+<div class="inferior">
     <div></div>
 </div>
 </body>
