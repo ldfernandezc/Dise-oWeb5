@@ -9,49 +9,48 @@
         font-family: Arial, sans-serif;
         background-color: #f0f0f0;
     }
-    .login-box {
-        width: 300px;
-        padding: 20px;
-        background-color: #fff;
-        margin: 100px auto;
+    .navbar {
+        background-color: #333;
         border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    .login-box h2 {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    .login-box input[type="text"],
-    .login-box input[type="password"] {
-        width: calc(100% - 20px);
-        padding: 10px;
-        margin-bottom: 15px;
-        border: 1px solid #ddd;
-        border-radius: 3px;
-    }
-    .login-box input[type="submit"] {
-        width: 100%;
-        padding: 10px;
-        background-color: #4CAF50;
-        color: #fff;
-        border: none;
-        border-radius: 3px;
-        cursor: pointer;
-        font-size: 16px;
-    }
-    .login-box input[type="submit"]:hover {
-        background-color: #45a049;
+        display: block;
+        height: 25px;
+    } 
+    .submenu {
+        display: none;
+        position: absolute;
+        background-color: #333;
+        top: 100%;
+        left: 0;
+        flex-direction: column;
+        min-width: 200px;
+        z-index: 1;
     }
 </style>
 </head>
 <body>
-    <div class="login-box">
-        <h2>Login</h2>
-        <form action="/login" method="post">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <input type="submit" value="Login">
-        </form>
+<div class="navbar">
+    <div><h2>Daniel</h2></div>
+    <div class="submenu">
+        <a href="#webdesign" class="submenu-item">Asshly</a>
+        <a href="#seo" class="submenu-item">Dylan</a>
+        <a href="#marketing" class="submenu-item">Alejandro</a>
+        <a href="#marketing" class="submenu-item">Jeremy</a>
+        <a href="#marketing" class="submenu-item">Adrian</a>
+        <a href="#marketing" class="submenu-item">Yoel</a>
+        <a href="#marketing" class="submenu-item">Karen</a>
+        <a href="#marketing" class="submenu-item">Danny</a>
+        <a href="#marketing" class="submenu-item">Joshua</a>
+        <a href="#marketing" class="submenu-item">Aaron</a>
+        <a href="#marketing" class="submenu-item">Daniel</a>
+        <a href="maidelyn.html" class="submenu-item">Maidelyn</a>
+        <a href="#marketing" class="submenu-item">Ashley M</a>
+        <a href="#marketing" class="submenu-item">Sebastián</a>
+        <a href="#marketing" class="submenu-item">Carlos</a>
     </div>
+
+</div>
+<div>
+
+</div>
 </body>
 </html>
